@@ -16,7 +16,7 @@ import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.model.ExpenseType;
 import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.model.Transaction;
 
 /**
- * Created by Yasiru on 12/6/2015.
+ * Created by Buddhi on 12/6/2015.
  */
 public class PersistenceTransactionDAO implements TransactionDAO {
     public static final String TABLE_NAME = "MyTransaction";
@@ -31,6 +31,7 @@ public class PersistenceTransactionDAO implements TransactionDAO {
         this.databaseObject = sqLiteOpenHelper;
     }
 
+//    Transaction log
     @Override
     public void logTransaction(Date date, String accountNo, ExpenseType expenseType, double amount) {
         int expense = -1;
@@ -53,6 +54,7 @@ public class PersistenceTransactionDAO implements TransactionDAO {
         db.close();
     }
 
+//    View all transaction log
     @Override
     public List<Transaction> getAllTransactionLogs() {
         List<Transaction> transactionList = new ArrayList<Transaction>();
@@ -91,6 +93,7 @@ public class PersistenceTransactionDAO implements TransactionDAO {
         return transactionList;
     }
 
+//    Get paginated logs
     @Override
     public List<Transaction> getPaginatedTransactionLogs(int limit) {
         List<Transaction> transactionList = getAllTransactionLogs();

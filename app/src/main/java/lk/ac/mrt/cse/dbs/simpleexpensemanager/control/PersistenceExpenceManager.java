@@ -9,7 +9,7 @@ import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.impl.PersistenceAccountDAO;
 import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.impl.PersistenceTransactionDAO;
 
 /**
- * Created by Yasiru on 12/6/2015.
+ * Created by Buddhi on 12/6/2015.
  */
 public class PersistenceExpenceManager extends ExpenseManager{
 

@@ -5,9 +5,10 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 /**
- * Created by Yasiru on 12/6/2015.
+ * Created by Buddhi on 12/6/2015.
  */
 public class DatabaseAccess extends SQLiteOpenHelper {
+//    Database Name - 130620E
     public static final String DB_NAME = "130620E";
 
     public DatabaseAccess(Context context) {
@@ -16,6 +17,7 @@ public class DatabaseAccess extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+//        Queries for creating the tables
         String query1 = "CREATE TABLE Account ("
                 + "Account_no TEXT PRIMARY KEY, Bank TEXT, "
                 +"Holder TEXT, balance DOUBLE );";
